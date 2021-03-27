@@ -13,7 +13,7 @@ func NotificationsC(sig ...os.Signal) <-chan os.Signal {
 }
 
 func QuitC() <-chan os.Signal {
-	return Notifications(syscall.SIGINT, syscall.SIGTERM)
+	return NotificationsC(syscall.SIGINT, syscall.SIGTERM)
 }
 
 func WaitQuit() os.Signal {

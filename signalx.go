@@ -6,7 +6,7 @@ import (
 	"syscall"
 )
 
-func Notifications(sig ...os.Signal) <-chan os.Signal {
+func NotificationsC(sig ...os.Signal) <-chan os.Signal {
 	signalC := make(chan os.Signal, 1)
 	signal.Notify(signalC, sig...)
 	return signalC

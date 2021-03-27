@@ -1,5 +1,7 @@
 # go-signalx
 
+Quick way to handle `SIGINT` and `SIGTERM.
+
 ## Example
 
 ```go
